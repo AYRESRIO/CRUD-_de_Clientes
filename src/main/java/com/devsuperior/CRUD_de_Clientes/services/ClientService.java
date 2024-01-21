@@ -47,6 +47,11 @@ public class ClientService {
 
    }
 
+   @Transactional
+   public void delete(Long id){
+       repository.deleteById(id);
+   }
+
    private void copyDtoToEntity(ClientDTO dto, Client entity) {
       entity.setBirthDate(dto.getBirthDate());
       entity.setChildren(dto.getChildren());
