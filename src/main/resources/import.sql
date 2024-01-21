@@ -33,3 +33,4 @@ INSERT INTO tb_client(birth_date, children, income, cpf, name) VALUES ('1999-03-
 INSERT INTO tb_client(birth_date, children, income, cpf, name) VALUES ('2002-03-16', 1, 26000.0, '098.765.432.12', 'Carlos Drumond de Andrade Nunes' );
 INSERT INTO tb_client(birth_date, children, income, cpf, name) VALUES ('2001-12-01', 1, 23000.0, '342.675.908.-09', 'Andrea Cavalcanti Montenegro' );
 INSERT INTO tb_client(birth_date, children, income, cpf, name) VALUES ('1999-08-07', 1, 550000.0, '432.654.876.21', 'Kassandra Matarazzo Boldrinni' );
+INSERT INTO tb_client(birth_date, children, income, cpf, name) VALUES ('1922-05-30', 3, 45000.0, '000.123.456-78', 'Louis Hamilton junior');
