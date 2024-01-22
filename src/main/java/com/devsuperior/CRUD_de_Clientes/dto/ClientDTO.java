@@ -2,15 +2,28 @@ package com.devsuperior.CRUD_de_Clientes.dto;
 
 import com.devsuperior.CRUD_de_Clientes.entities.Client;
 
+import jakarta.validation.constraints.*;
+import org.hibernate.validator.constraints.br.CPF;
+
 import java.time.LocalDate;
 
 public class ClientDTO {
     private Long id;
-    private String name;
+
+  @Size(min = 3,max = 80, message = "Nome precisa ter de 3 a 80 caracteres")
+  @NotBlank(message = "Campo requerido")
+  private String name;
+
+    @NotBlank(message = "Campo requerido")
+    @CPF
     private String cpf;
+    @Positive(message = "Rendimento deve ser positivo")
     private Double income;
+    @PastOrPresent(message = "data inválida")
     private LocalDate birthDate;
-    private Integer children;
+
+   @Min(0)
+   private Integer children;
 
     public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
